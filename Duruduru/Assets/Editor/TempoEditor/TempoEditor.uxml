@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="MainVisualElement" style="height: auto; flex-grow: 1; flex-direction: row; flex-shrink: 1; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;">
+        <ui:VisualElement name="TempoBtnList" style="margin-left: 5px; width: 25%; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;">
+            <ui:Button text="MainTempo1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainTempo1" style="height: 30px;" />
+            <ui:Button text="MainTempo2" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainTempo2" style="height: 30px;" />
+            <ui:Button text="MainTempo3" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainTempo3" style="height: 30px;" />
+            <ui:Button text="MainTempo4" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainTempo4" style="height: 30px;" />
+            <ui:Button text="PointTempo1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PointTempo1" style="height: 30px;" />
+            <ui:Button text="PointTempo2" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PointTempo2" style="height: 30px;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="width: 1px;" />
+        <ui:ScrollView name="MainVisualElement" style="width: 75%;">
+            <ui:VisualElement name="Info" style="flex-direction: row; align-items: center;">
+                <ui:Label text="템포 정보" display-tooltip-when-elided="true" parse-escape-sequences="false" name="TempoTitle" style="font-size: 30px; margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;" />
+            </ui:VisualElement>
+            <ui:GroupBox>
+                <ui:FloatField label="Perfect 데미지" value="0" name="PerfectDamage" binding-path="maxDamage" />
+                <ui:FloatField label="Good 데미지" value="0" name="GoodDamage" binding-path="minDamage" />
+                <ui:Slider label="공격 거리" high-value="100" show-input-field="true" binding-path="distance" />
+                <ui:VisualElement style="flex-grow: 1; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; border-left-color: rgb(42, 42, 42); border-right-color: rgb(42, 42, 42); border-top-color: rgb(42, 42, 42); border-bottom-color: rgb(42, 42, 42); border-top-width: 3px;" />
+                <uie:EnumField label="타입" binding-path="type" style="margin-top: 1px; border-top-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); display: none;" />
+                <ui:VisualElement name="Stamina" style="flex-grow: 1; display: flex;">
+                    <ui:FloatField label="Perfect 스태미나" value="0" binding-path="maxStamina" name="PerfectStamina" style="display: flex;" />
+                    <ui:FloatField label="Good 스태미나" value="0" binding-path="minStamina" name="GoodStamina" />
+                </ui:VisualElement>
+            </ui:GroupBox>
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

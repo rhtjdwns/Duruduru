@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/CustomTemplate/Template/NKUSSTemplate.uss?fileID=7433441132597879392&amp;guid=6a25e899d15eb994b85241dddfd90559&amp;type=3#NKUSSTemplate" />
+    <Style src="project://database/Assets/CustomTemplate/Template/OdinUSSTemplate.uss?fileID=7433441132597879392&amp;guid=8ee2195f99d140f43ae4fd9b456629f9&amp;type=3#OdinUSSTemplate" />
+    <Style src="project://database/Assets/CustomTemplate/Template/ToggleUSSTemplate.uss?fileID=7433441132597879392&amp;guid=2e3e5c2da0c15f741a97092246c349e6&amp;type=3#ToggleUSSTemplate" />
+    <uie:ObjectField label="Script" binding-path="m_Script" name="unity-input-m_Script" style="display: none;" />
+    <ui:Label tabindex="-1" text="Platform Control" parse-escape-sequences="true" display-tooltip-when-elided="true" class="TitleStyle" />
+    <ui:Toggle label="자동 교체 모드" binding-path="_isAutoMode" name="Auto" class="Round-toggle" style="margin-bottom: 10px; margin-top: 10px; font-size: 20px;" />
+    <ui:VisualElement name="AutoGroupBox" class="GroupBoxStyle" style="flex-grow: 1; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; padding-left: 10px;">
+        <ui:ListView selection-type="Single" tabindex="0" usage-hints="None" picking-mode="Ignore" binding-path="_platformList" virtualization-method="DynamicHeight" fixed-item-height="22" show-border="true" focusable="true" show-alternating-row-backgrounds="None" reorderable="true" horizontal-scrolling="true" show-foldout-header="true" show-add-remove-footer="true" header-title="플랫폼 정보" reorder-mode="Animated" show-bound-collection-size="true" class="unity-base-field__aligned" style="align-self: auto; flex-direction: column; visibility: visible; opacity: 1; display: flex; margin-top: 0; margin-bottom: 0;" />
+        <ui:Slider label="교체 시간" high-value="100" binding-path="_changeTime" show-input-field="true" inverted="false" style="flex-direction: row; bottom: auto;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="NotAutoGroupBox" class="GroupBoxStyle" style="flex-grow: 1; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; display: none;">
+        <ui:ListView selection-type="Single" tabindex="0" usage-hints="None" picking-mode="Ignore" binding-path="_platformList" virtualization-method="DynamicHeight" fixed-item-height="22" show-border="true" focusable="true" show-alternating-row-backgrounds="None" reorderable="true" horizontal-scrolling="true" show-foldout-header="true" show-add-remove-footer="true" header-title="플랫폼 정보" reorder-mode="Animated" show-bound-collection-size="true" name="ListView" class="unity-base-field__aligned" style="align-self: auto; flex-direction: column; visibility: visible; opacity: 1; display: flex; margin-top: 0; margin-bottom: 0;" />
+    </ui:VisualElement>
+    <uie:ObjectField label="플랫폼 프리팹" binding-path="_platformPrefab" allow-scene-objects="true" name="ObjectField" style="display: none;" />
+    <ui:GroupBox style="margin-top: 30px;">
+        <ui:Button text="생성" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button_Create" class="ButtonStyle" style="margin-top: 3px; height: 50px;" />
+        <ui:Button text="삭제" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button_Delete" class="ButtonStyle" style="margin-top: 3px; height: 50px;" />
+    </ui:GroupBox>
+</ui:UXML>
